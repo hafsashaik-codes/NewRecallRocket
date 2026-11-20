@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecallRocket | Smart Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🚀 RecallRocket</h1>
+        <p>Your Smart Flashcard Learning Space</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('study')">Study</button>
+        <button onclick="showPage('create')">Create Cards</button>
+        <button onclick="showPage('dashboard')">Dashboard</button>
+    </nav>
+
+    <main>
+
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="container">
+                <h2>Welcome to RecallRocket!</h2>
+                <p>Learn smarter, revise faster and remember better.</p>
+
+                <div class="features">
+                    <div class="feature-box">
+                        <h3>📚 Create Cards</h3>
+                        <p>Create your own questions and answers.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h3>🧠 Study</h3>
+                        <p>Practice using interactive flashcards.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <h3>📊 Track Progress</h3>
+                        <p>Monitor your learning achievements.</p>
+                    </div>
+                </div>
+
+                <button class="main-btn"
+                    onclick="showPage('study')">
+                    Start Learning
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Study Page -->
+        <section id="study" class="page">
+            <div class="container">
+
+                <h2>Study Flashcards</h2>
+
+                <p id="cardCount">Card 1 of 5</p>
+
+                <div class="flashcard" id="flashcard"
+                    onclick="flipCard()">
+
+                    <h3 id="cardLabel">QUESTION</h3>
+
+                    <h2 id="cardText">What does HTML stand for?</h2>
+
+                    <p id="cardHint">
+                        Click the card to reveal the answer
+                    </p>
+
+                </div>
+
+                <div class="controls">
+                    <button onclick="previousCard()">Previous</button>
+                    <button onclick="flipCard()">Flip Card</button>
+                    <button onclick="nextCard()">Next</button>
+                </div>
+
+                <div class="controls">
+                    <button class="know-btn"
+                        onclick="markMastered()">
+                        I Know This ✓
+                    </button>
+
+                    <button class="shuffle-btn"
+                        onclick="shuffleCards()">
+                        Shuffle
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Create Cards Page -->
+        <section id="create" class="page">
+            <div class="container">
+
+                <h2>Create a Flashcard</h2>
+
+                <form id="cardForm">
+
+                    <label>Question</label>
+
+                    <textarea id="question"
+                        placeholder="Enter your question"
+                        required></textarea>
+
+                    <label>Answer</label>
+
+                    <textarea id="answer"
+                        placeholder="Enter your answer"
+                        required></textarea>
+
+                    <label>Category</label>
+
+                    <select id="category">
+                        <option>General</option>
+                        <option>Technology</option>
+                        <option>Programming</option>
+                        <option>Mathematics</option>
+                        <option>Science</option>
+                    </select>
+
+                    <button type="submit" class="main-btn">
+                        Add Flashcard
+                    </button>
+
+                </form>
+
+                <p id="successMessage"></p>
+
+            </div>
+        </section>
+
+
+        <!-- Dashboard Page -->
+        <section id="dashboard" class="page">
+            <div class="container">
+
+                <h2>Learning Dashboard</h2>
+
+                <p>Your learning progress at a glance.</p>
+
+                <div class="progress-box">
+
+                    <h3>Mastery Progress</h3>
+
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+
+                    <p id="progressText">0% completed</p>
+
+                </div>
+
+                <h3>Your Flashcards</h3>
+
+                <div id="cardList"></div>
+
+                <button class="reset-btn"
+                    onclick="resetProgress()">
+                    Reset Learning Progress
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 RecallRocket | Learn • Revise • Remember
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

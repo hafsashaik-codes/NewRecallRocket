@@ -1,0 +1,374 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eeeeff, #e4e4f5);
+    color: #252344;
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+header {
+    background: linear-gradient(120deg, #4932a5, #7862d6);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* Navigation */
+
+nav {
+    background: #171525;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav button {
+    background: #eeeeff;
+    color: #171525;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #a99af5;
+    transform: translateY(-3px);
+}
+
+
+/* Main Sections */
+
+main {
+    min-height: 65vh;
+    padding: 35px 15px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.65);
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(50, 40, 100, 0.08);
+}
+
+.container h2 {
+    margin-bottom: 15px;
+    color: #332775;
+    font-size: 27px;
+}
+
+.container > p {
+    margin-bottom: 25px;
+}
+
+
+/* Home Features */
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.feature-box {
+    background: #eeeeff;
+    padding: 25px 15px;
+    border-radius: 14px;
+    flex: 1 1 180px;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    background: #ddd7ff;
+}
+
+.feature-box h3 {
+    margin-bottom: 12px;
+}
+
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn {
+    background: #4932a5;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.main-btn:hover {
+    background: #705bd0;
+    transform: scale(1.04);
+}
+
+
+/* Flashcard */
+
+.flashcard {
+    background: linear-gradient(135deg, #4932a5, #7761d4);
+    color: white;
+    min-height: 250px;
+    border-radius: 20px;
+    margin: 25px auto;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(50, 30, 130, 0.2);
+}
+
+.flashcard h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.flashcard h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.flashcard p {
+    margin-top: 15px;
+}
+
+
+/* Study Controls */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 15px;
+}
+
+.controls button {
+    border: none;
+    background: #e4e2f5;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background: #c9c1f3;
+}
+
+.controls .know-btn {
+    background: #a8e8bd;
+}
+
+.controls .shuffle-btn {
+    background: #f4d68a;
+}
+
+
+/* Create Flashcard Form */
+
+form {
+    text-align: left;
+    max-width: 620px;
+    margin: 25px auto;
+}
+
+form label {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+}
+
+form textarea,
+form select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #c8c8d4;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #fafaff;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    height: 95px;
+    resize: vertical;
+}
+
+form textarea:focus,
+form select:focus {
+    outline: 2px solid #7966d5;
+}
+
+#successMessage {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* Dashboard */
+
+.progress-box {
+    background: #e8e7f5;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.progress-box h3 {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 18px;
+    background: #d0cfe0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4932a5, #8b76ed);
+    transition: width 0.5s;
+}
+
+#progressText {
+    margin-top: 12px;
+}
+
+
+/* Flashcard List */
+
+#cardList {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.card-item {
+    background: #eeeeff;
+    padding: 18px;
+    border-radius: 12px;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.card-item button {
+    background: #f2c5bd;
+    color: #782e24;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.card-item button:hover {
+    background: #eaa69a;
+}
+
+
+/* Reset Button */
+
+.reset-btn {
+    background: #4932a5;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.reset-btn:hover {
+    background: #705bd0;
+}
+
+
+/* Footer */
+
+footer {
+    background: #171525;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    nav button {
+        padding: 10px 13px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 22px 15px;
+    }
+
+    .flashcard {
+        min-height: 220px;
+    }
+
+    .flashcard h2 {
+        font-size: 21px;
+    }
+}
